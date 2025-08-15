@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+:root {
+  --header-bg : rgb(0, 151, 81);
+  --header-border-bottom: orange;
+  --myfont: 'Poppins';
+  --footer-bg: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--myfont), Arial, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 30px;
+}
+
+h1, h2, h3 {
+  color: var(--header-bg);
+}
+
+
+/* header */
+
+header {
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 6vh;
+  min-height: 42px;
+  max-height: 100px;
+  background-color: var(--header-bg);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--header-border-bottom);
+  align-items: center;
+  z-index: 3;
+}
+
+#logo {
+  margin: auto 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+}
+
+#logo-name {
+  text-align: left;
+  color: wheat;
+  font-size: 20px;
+}
+
+#logo-name span {
+  font-family: French Script MT;
+  color: var(--header-border-bottom);
+  animation: 5s ccc infinite linear;
+}
+
+@keyframes ccc {
+  0%{color: wheat;}
+  50%{color: var(--header-border-bottom);}
+  100%{color: wheat;}
+}
+
+#logo-name, #welcome-text h1, section h2 {
+  font-family: 'Bricolage Grotesque', 'Poppins', Arial;
+}
+
+#navbar {
+  right: 0;
+  padding: 4px;
+  background-color: whitesmoke;
+  min-width: 100px;
+  min-height: 44px;
+}
+
+#menu {
+  top: 6vh;
+  right: 0;
+  display: none;
+  z-index: 3;
+  position: fixed;
+}
+
+#burger, #closeBurger {
+  margin-right: 8px;
+}
+
+#burger:active, #closeBurger:active {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+
+#closeBurger {
+  display: none;
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  text-align: right;
+}
+
+#navbar ul li {
+  margin: 8px 16px;
+} 
+
+#navbar ul li:hover {
+  transform: scale(1.1);
+  border-bottom: 4px solid var(--header-border-bottom);
+  transition: 0.3s;
+}
+
+#navbar ul li a{
+  color: var(--header-bg);
+} 
+
+#navbar ul li a::after{
+  content: ' ↓';
+} 
+
+
+/* sections */
+section {
+  width: 100vw;
+  padding-top: 6vh;
+  padding-left: 24px;
+  padding-right: 24px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid pink;
+}
+
+section > p {
+  color: gray;
+  font-size: 20px;
+  font-style: italic; 
+  font-family: French Script MT, 'Poppins', Arial;
+}
+section > p::before, section > p::after {
+  content: '"';
+}
+/* accueil */
+
+
+#accueil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-image: url(images/africa.png);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3), 
+    var(--header-border-bottom)
+  );
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  position: relative;
+}
+
+@media (max-width: 450px){
+  #accueil h1 {
+    font-size: 30px;
+  }
+}
+
+#accueil img {
+  width: 40vw;
+  min-width: 80px;
+  max-width: 160px;
+  animation: animate 3s linear;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+@keyframes animate{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+
+#welcome {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome div{
+  margin: 0 10px;
+}
+
+#welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#welcome-text p, 
+#welcome-text h1 {
+  text-align: right;
+}
+
+
+
+#welcome button {
+  width: min-content;
+  border-radius: 10px;
+  background-color: var(--header-bg);
+  border: 1px solid var(--header-bg);
+  padding: 4px; 
+  font-size: 20px;
+  color: white;
+}
+
+#welcome button:hover {
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+#welcome div img {
+  width: 100%;
+  height: 50%;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+#bon-appetit {
+  bottom: 4px;
+  position: absolute;
+  margin-bottom: 16px;
+}
+
+#bon-appetit span{
+  font-style: italic;
+}
+
+#bon-appetit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* petit dej */
+
+h1, h2, h3, p {
+  text-align: center;
+}
+
+
+
+.imgcenter {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 16px auto;
+  border-radius: 10px;
+}
+
+.roter {
+  animation: roter 100s linear;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  border: 4px solid var(--header-border-bottom);
+}
+
+@keyframes roter {
+  0%{
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#viandehachee,
+#gombo, 
+#shawa, 
+#hambg, 
+#chicken, 
+#rog,
+#beef {
+  width: 50vw;
+  height: min-content;
+}
+
+.mesimg {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.mesimg img {
+  width: calc(100% / 3);
+}
+
+
+.item p {
+  display: inline-block;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.flavor{
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+/* articles */
+
+.articles {
+  width: 100%;
+  min-width: 300px;
+  max-width: 900px;
+  padding: 8px;
+  border: 2px solid pink;
+  border-style: dotted;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 0, 0.2), rgba(255, 166, 0, 0.3));
+  backdrop-filter: blur(20px);
+}
+
+
+#emballages {
+  opacity: 0.75;
+  border: none;
+}
+#emballages .articles {
+  border: none;
+}
+
+#contact {
+  background: linear-gradient(#333, var(--footer-bg));
+  border: none;
+  margin-bottom: none;
+  padding-bottom: 16px;
+}
+
+#contact h2 {
+  color: aliceblue;
+}
+
+#contact p {
+  color: bisque;
+}
+
+#contact span {
+  font-size: 16px;
+  color: bisque;
+  margin:   4px;
+}
+
+#contact-links {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-links a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#contact-links a:hover span{
+  color: var(--header-bg);
+}
+#contact-links a:active span{
+  color: var(--header-border-bottom);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--header-bg);
+}
+
+/* bouton flottant */
+.btn-flow {
+  width: 8vw;
+  height: 8vw;
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 50%;
+  background-color: var(--header-bg);
+  border-color: var(--header-border-bottom);
+  position: fixed;
+  right: 4vw;
+  bottom: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  z-index: 5;
+}
+
+.btn-flow img {
+  width: 80%;
+  height: 80%;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--header-bg);
+  padding: 20px;
+  font-size: 12px;
+}
+
+@media (min-width: 900px){
+  #contact-links {
+    flex-direction: row;
+    gap: 4px 8px;
+  }
+}
