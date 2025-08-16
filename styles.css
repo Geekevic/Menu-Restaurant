@@ -72,6 +72,7 @@ header img {
 }
 
 #logo-name span {
+  font-family: 'Bricolage Grotesque', 'Poppins';
   color: var(--header-border-bottom);
   animation: 5s ccc infinite linear;
 }
@@ -464,5 +465,6 @@ footer {
     gap: 4px 8px;
   }
 }
+
 
 
