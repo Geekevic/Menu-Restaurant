@@ -72,7 +72,6 @@ header img {
 }
 
 #logo-name span {
-  font-family: French Script MT;
   color: var(--header-border-bottom);
   animation: 5s ccc infinite linear;
 }
@@ -160,7 +159,7 @@ section > p {
   color: gray;
   font-size: 14px;
   font-style: italic; 
-  font-family: French Script MT, 'Poppins', Arial;
+  font-family: 'Poppins', Arial;
 }
 @media (min-width: 500px){
   section > p {
@@ -455,7 +454,7 @@ h1, h2, h3, p {
 footer {
   background-color: var(--footer-bg);
   color: var(--header-bg);
-  padding: 20px;
+  padding: 12px;
   font-size: 12px;
 }
 
@@ -465,4 +464,5 @@ footer {
     gap: 4px 8px;
   }
 }
+
 
