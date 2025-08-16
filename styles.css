@@ -109,7 +109,7 @@ header img {
 
 #burger:active, #closeBurger:active {
   transform: rotate(90deg);
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
 #closeBurger {
@@ -158,9 +158,14 @@ section {
 
 section > p {
   color: gray;
-  font-size: 20px;
+  font-size: 14px;
   font-style: italic; 
   font-family: French Script MT, 'Poppins', Arial;
+}
+@media (min-width: 500px){
+  section > p {
+    font-size: 20px;
+  }
 }
 section > p::before, section > p::after {
   content: '"';
@@ -460,3 +465,4 @@ footer {
     gap: 4px 8px;
   }
 }
+
