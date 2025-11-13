@@ -1,4 +1,3 @@
-
 //bouton navigation
 
 const burger = document.getElementById("burger");
@@ -27,5 +26,3 @@ const lesmenus = document.querySelectorAll('.lesmenus').forEach(
     })
   }
 );
-
-//desactiver le service Orange
