@@ -292,9 +292,6 @@ h1, h2, h3, p {
 }
 
 /* viande-hachee */
-#viande-hachee{
-  background-color: #fbe2c1;
-}
 
 .imgcenter {
   display: block;
@@ -359,6 +356,21 @@ h1, h2, h3, p {
   width: 24%;
 }
 
+@media (max-width: 400px){
+  .item p {
+    margin: 6px 0;
+    font-size: 10px;
+  }
+
+  .flavor{
+    width: 72%;
+  }
+
+  .price {
+    width: 26%;
+  }
+}
+
 /* articles */
 
 .articles {
@@ -379,6 +391,7 @@ h1, h2, h3, p {
   font-weight: bold;
 }
 
+
 #emballages {
   opacity: 0.75;
   border: none;
@@ -388,6 +401,7 @@ h1, h2, h3, p {
 }
 
 #contact {
+  /* background: linear-gradient(#333, var(--footer-bg)); */
   background: url(images/La-Cuisine-Africaine-Conquiert-la-France.webp);
   background-repeat: no-repeat;
   background-size: cover;
