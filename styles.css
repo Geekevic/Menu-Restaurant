@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--myfont), Arial, sans-serif;
+  font-family: var(--myfont), 'Segoe Script', 'Bricolage Grotesque', sans-serif;
   list-style: none;
   text-decoration: none;
 }
@@ -72,7 +72,7 @@ header img {
 }
 
 #logo-name span {
-  font-family: 'Bricolage Grotesque', 'Poppins';
+  font-family: 'Segoe Script', 'Poppins', 'Bricolage Grotesque';
   color: var(--header-border-bottom);
   animation: 5s ccc infinite linear;
 }
@@ -84,7 +84,7 @@ header img {
 }
 
 #logo-name, #welcome-text h1, section h2 {
-  font-family: 'Bricolage Grotesque', 'Poppins', Arial;
+  font-family: 'Poppins', 'Bricolage Grotesque', Arial;
 }
 
 #navbar {
@@ -160,7 +160,7 @@ section > p {
   color: gray;
   font-size: 14px;
   font-style: italic; 
-  font-family: 'Poppins', Arial;
+  font-family: 'Bradley Hand ITC', 'Segoe Script', 'Poppins', Arial;
 }
 @media (min-width: 500px){
   section > p {
@@ -170,6 +170,8 @@ section > p {
 section > p::before, section > p::after {
   content: '"';
 }
+
+
 /* accueil */
 
 
@@ -289,7 +291,10 @@ h1, h2, h3, p {
   text-align: center;
 }
 
-
+/* viande-hachee */
+#viande-hachee{
+  background-color: #fbe2c1;
+}
 
 .imgcenter {
   display: block;
@@ -345,12 +350,13 @@ h1, h2, h3, p {
 
 .flavor{
   text-align: left;
-  width: 75%;
+  width: 74%;
 }
+
 
 .price {
   text-align: right;
-  width: 25%;
+  width: 24%;
 }
 
 /* articles */
@@ -369,6 +375,10 @@ h1, h2, h3, p {
 }
 
 
+.item:hover{
+  font-weight: bold;
+}
+
 #emballages {
   opacity: 0.75;
   border: none;
@@ -378,7 +388,21 @@ h1, h2, h3, p {
 }
 
 #contact {
-  background: linear-gradient(#333, var(--footer-bg));
+  background: url(images/La-Cuisine-Africaine-Conquiert-la-France.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 0 !important;
+}
+
+.contact-bg{
+  width: 100vw;
+  padding-left: 24px;
+  padding-right: 24px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(53, 16, 1, 0.863);
   border: none;
   margin-bottom: none;
   padding-bottom: 16px;
@@ -465,6 +489,3 @@ footer {
     gap: 4px 8px;
   }
 }
-
-
-
